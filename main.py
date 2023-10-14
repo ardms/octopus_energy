@@ -10,8 +10,7 @@ with open('config.json', 'r') as file:
 
 octopusInstance = OctopusObject(**conf)
 
-date_start, date_end = supplementary.get_dates()
-data_el = octopusInstance.get_electricity_metered(date_start, date_end)
+data_el = octopusInstance.get_electricity_metered()
 
 fig = octopusInstance.plot_electricity()
 
